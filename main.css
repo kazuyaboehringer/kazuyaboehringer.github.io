@@ -20,36 +20,57 @@
    BASE
 ========================= */
 body {
-    font-family: "Myriad Pro", "Segoe UI", Helvetica, Arial, sans-serif;
-    background: transparent;
+    font-family: "Source Sans 3", Helvetica, Arial, sans-serif;
+    background: var(--white);
     color: var(--black);
     line-height: 1.65;
     overflow-x: hidden;
 }
 
 /* =========================
-   BACKGROUND GRADIENT
+   RIGHT-SIDE RED FRAME
 ========================= */
-.background-gradient {
+.page-frame {
     position: fixed;
-    inset: 0;
-    background:
-        radial-gradient(
-            circle at center 38%,
-            rgba(196, 0, 0, 0.35),
-            rgba(255, 255, 255, 0) 60%
-        ),
-        #ffffff;
-    z-index: -1;
-    animation: gradientFade 1.2s ease-out forwards;
+    top: 0;
+    right: 0;
+    width: 12px;
+    height: 100vh;
+    background: var(--red);
+    z-index: 2;
 }
 
-@keyframes gradientFade {
-    from {
-        opacity: 0;
-    }
+/* =========================
+   LOADING GRADIENT
+========================= */
+.loading-gradient {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(
+            circle at center 40%,
+            rgba(196, 0, 0, 0.85),
+            rgba(196, 0, 0, 0.15),
+            rgba(255, 255, 255, 0) 70%
+        );
+    z-index: 5;
+    animation: dropGradient 1.2s ease-out forwards,
+               fadeGradient 1.2s ease-out 1.2s forwards;
+}
+
+@keyframes dropGradient {
     to {
-        opacity: 1;
+        top: 0;
+    }
+}
+
+@keyframes fadeGradient {
+    to {
+        opacity: 0.25;
+        filter: saturate(40%);
     }
 }
 
@@ -59,7 +80,7 @@ body {
 .fade-in {
     opacity: 0;
     animation: contentFade 0.8s ease-out forwards;
-    animation-delay: 1.1s;
+    animation-delay: 2.2s;
 }
 
 @keyframes contentFade {
@@ -72,21 +93,20 @@ body {
    TOP BAR
 ========================= */
 .top-bar {
-    background: var(--black);
-    padding: 1.6rem 0;
+    padding: 1.8rem 0;
 }
 
 .top-nav {
     display: flex;
     justify-content: center;
-    gap: 3rem;
+    gap: 3.5rem;
 }
 
 .top-nav a {
-    color: var(--white);
-    text-decoration: none;
     font-size: 1.15rem;
     font-weight: 700;
+    color: var(--black);
+    text-decoration: none;
     letter-spacing: 0.6px;
     transition: transform 0.25s ease, color 0.25s ease;
 }
@@ -184,7 +204,6 @@ body {
     text-align: center;
     padding: 1.6rem;
     font-size: 0.9rem;
-    color: var(--black);
 }
 
 /* =========================
@@ -192,7 +211,7 @@ body {
 ========================= */
 @media (max-width: 768px) {
     .top-nav {
-        gap: 1.8rem;
+        gap: 2rem;
     }
 
     .hero-image {
@@ -205,5 +224,9 @@ body {
 
     .hero-description {
         font-size: 1.15rem;
+    }
+
+    .page-frame {
+        width: 8px;
     }
 }
