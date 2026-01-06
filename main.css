@@ -14,9 +14,8 @@
     --black: #000;
     --white: #fff;
 
-    /* Blues */
-    --royal-blue: #1f3cff;     /* text accents */
-    --sky-blue: #8ecbff;       /* borders / gradients */
+    --royal-blue: #1f3cff;
+    --sky-blue: #8ecbff;
 }
 
 /* =========================
@@ -44,7 +43,26 @@ body {
 }
 
 /* =========================
-   LOADING GRADIENT (2 STAGE)
+   DOTTED LINES
+========================= */
+.dot-lines {
+    position: fixed;
+    left: 6%;
+    top: 0;
+    height: 100vh;
+    width: 2px;
+    background-image: repeating-linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.25),
+        rgba(0,0,0,0.25) 4px,
+        transparent 4px,
+        transparent 14px
+    );
+    z-index: 0;
+}
+
+/* =========================
+   LOADING SWEEP
 ========================= */
 .loading-gradient {
     position: fixed;
@@ -64,25 +82,16 @@ body {
 }
 
 @keyframes gradientIn {
-    from {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
 @keyframes gradientOut {
-    to {
-        opacity: 0.25;
-        filter: saturate(40%);
-    }
+    to { opacity: 0; }
 }
 
 /* =========================
-   FADE CONTENT IN AFTER
+   CONTENT FADE
 ========================= */
 .fade-in {
     opacity: 0;
@@ -91,9 +100,7 @@ body {
 }
 
 @keyframes contentFade {
-    to {
-        opacity: 1;
-    }
+    to { opacity: 1; }
 }
 
 /* =========================
@@ -108,15 +115,15 @@ body {
 .top-nav {
     display: flex;
     justify-content: center;
-    gap: 3.5rem;
+    gap: 3.2rem;
 }
 
 .top-nav a {
-    text-decoration: none;
-    color: var(--black);
+    position: relative;
     font-size: 1.15rem;
     font-weight: 700;
-    position: relative;
+    color: var(--black);
+    text-decoration: none;
 }
 
 .top-nav a span {
@@ -133,7 +140,6 @@ body {
     height: 2px;
     background: var(--royal-blue);
     transform: scaleX(0);
-    transform-origin: center;
     transition: transform 0.25s ease;
 }
 
@@ -161,6 +167,26 @@ body {
 .hero-content {
     max-width: 900px;
     text-align: center;
+    position: relative;
+}
+
+/* =========================
+   PROFILE GRADIENT
+========================= */
+.profile-gradient {
+    position: absolute;
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 420px;
+    height: 420px;
+    background:
+        radial-gradient(
+            circle,
+            rgba(142, 203, 255, 0.45),
+            rgba(142, 203, 255, 0) 70%
+        );
+    z-index: -1;
 }
 
 /* =========================
@@ -210,20 +236,22 @@ body {
     margin-top: 2rem;
 }
 
-.hero-links .btn {
+.hero-links .btn.soft {
     display: inline-block;
     margin: 0.6rem;
-    padding: 1.1rem 2.8rem;
-    background: var(--black);
-    color: var(--white);
+    padding: 1.05rem 2.6rem;
+    background: rgba(142, 203, 255, 0.25);
+    color: var(--black);
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 700;
+    border-radius: 14px;
+    backdrop-filter: blur(4px);
     transition: transform 0.25s ease, background-color 0.25s ease;
 }
 
-.hero-links .btn:hover {
-    background: var(--royal-blue);
+.hero-links .btn.soft:hover {
+    background: rgba(142, 203, 255, 0.4);
     transform: translateY(-6px);
 }
 
@@ -240,8 +268,14 @@ body {
    RESPONSIVE
 ========================= */
 @media (max-width: 768px) {
-    .top-nav {
-        gap: 2rem;
+    .dot-lines {
+        display: none;
+    }
+
+    .profile-gradient {
+        width: 300px;
+        height: 300px;
+        top: 110px;
     }
 
     .hero-image {
