@@ -3,72 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>2D Animation – Kazuya Boehringer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
 
-<header>
-    <h1>2D Animation</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="animation.html">2D Animation</a>
-        <a href="storyboards.html">Storyboards</a>
+<div class="loading-gradient"></div>
+<div class="page-frame"></div>
+<div class="dot-lines"></div>
+
+<header class="top-bar fade-in">
+    <nav class="top-nav">
+        <a href="index.html"><span>Home</span></a>
+        <a href="animation.html"><span>2D Animation</span></a>
+        <a href="storyboards.html"><span>Storyboards</span></a>
+        <a href="credits.html"><span>Credits</span></a>
     </nav>
 </header>
 
-<div class="container">
+<main class="content fade-in">
+    <div class="content-inner">
 
-    <div class="section">
-        <h2>Professional Work</h2>
+        <h1 class="page-title">2D Animation</h1>
 
-        <div class="video-item">
-            <video controls>
-                <source src="assets/animation/pro1.mp4" type="video/mp4">
-            </video>
-            <div class="description">
-                Professional animation project. Description of the work, your role,
-                studio or client, and tools used.
-            </div>
-        </div>
+        <h2 class="section-title">Professional</h2>
+        <!-- video blocks go here -->
 
-        <div class="video-item">
-            <video controls>
-                <source src="assets/animation/pro2.mp4" type="video/mp4">
-            </video>
-            <div class="description">
-                Another professional project description.
-            </div>
-        </div>
+        <h2 class="section-title">Personal</h2>
+        <!-- video blocks go here -->
+
     </div>
+</main>
 
-    <div class="section">
-        <h2>Personal Work</h2>
-
-        <div class="video-item">
-            <video controls>
-                <source src="assets/animation/personal1.mp4" type="video/mp4">
-            </video>
-            <div class="description">
-                Personal animation exploring timing, acting, and style.
-            </div>
-        </div>
-
-        <div class="video-item">
-            <video controls>
-                <source src="assets/animation/personal2.mp4" type="video/mp4">
-            </video>
-            <div class="description">
-                Independent animation experiment or short film.
-            </div>
-        </div>
-    </div>
-
-</div>
-
-<footer>
-    © 2026 Kazuya Boehringer
+<footer class="footer fade-in">
+    © 2026
 </footer>
 
 </body>
 </html>
-
