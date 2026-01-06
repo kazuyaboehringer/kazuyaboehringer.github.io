@@ -1,17 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>2D Animation – Kazuya Boehringer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<!-- Loading animation -->
+<div class="loading-gradient"></div>
+
+<!-- Structural elements -->
+<div class="page-frame"></div>
+<div class="dot-lines"></div>
+
+<header class="top-bar fade-in">
+<nav class="top-nav">
+    <a href="index.html"><span>Home</span></a>
+    <a href="animation.html"><span>2D Animation</span></a>
+    <a href="storyboards.html"><span>Storyboards</span></a>
+    <a href="credits.html"><span>Credits</span></a>
+</nav>
+</header>
+
 <main class="content fade-in">
 <div class="content-inner">
-<h1 class="page-title">2D Animation</h1>
 
-<h2 class="section-title">Professional</h2>
-<div class="video-block">
-<video controls src="videos/pro1.mp4"></video>
-<p class="video-description">Professional animation project.</p>
-</div>
+    <h1 class="page-title">2D Animation</h1>
 
-<h2 class="section-title">Personal</h2>
-<div class="video-block">
-<video controls src="videos/personal1.mp4"></video>
-<p class="video-description">Personal animation test.</p>
-</div>
+    <h2 class="section-title">Professional</h2>
+
+    <div class="video-block">
+        <video controls>
+            <source src="videos/animation_pro_1.mp4" type="video/mp4">
+        </video>
+        <p class="video-description">
+            Professional animation work produced for studio projects.
+        </p>
+    </div>
+
+    <div class="video-block">
+        <video controls>
+            <source src="videos/animation_pro_2.mp4" type="video/mp4">
+        </video>
+        <p class="video-description">
+            Character animation focusing on timing, weight, and acting.
+        </p>
+    </div>
+
+    <h2 class="section-title">Personal</h2>
+
+    <div class="video-block">
+        <video controls>
+            <source src="videos/animation_personal_1.mp4" type="video/mp4">
+        </video>
+        <p class="video-description">
+            Personal animation test exploring motion and expression.
+        </p>
+    </div>
+
+    <div class="video-block">
+        <video controls>
+            <source src="videos/animation_personal_2.mp4" type="video/mp4">
+        </video>
+        <p class="video-description">
+            Short independent animation created outside of studio work.
+        </p>
+    </div>
+
 </div>
 </main>
+
+<footer class="footer fade-in">
+© 2026
+</footer>
+
+</body>
+</html>
