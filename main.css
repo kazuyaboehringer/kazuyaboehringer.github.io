@@ -14,7 +14,10 @@
     --black: #000;
     --white: #fff;
 
+    /* text / emphasis */
     --royal-blue: #1f3cff;
+
+    /* decorative / gradients */
     --sky-blue: #8ecbff;
 }
 
@@ -30,7 +33,7 @@ body {
 }
 
 /* =========================
-   RIGHT FRAME
+   RIGHT PAGE BORDER
 ========================= */
 .page-frame {
     position: fixed;
@@ -43,7 +46,7 @@ body {
 }
 
 /* =========================
-   DOTTED LINES
+   DOTTED GUIDE LINES
 ========================= */
 .dot-lines {
     position: fixed;
@@ -62,7 +65,7 @@ body {
 }
 
 /* =========================
-   LOADING SWEEP
+   LOADING GRADIENT SWEEP
 ========================= */
 .loading-gradient {
     position: fixed;
@@ -82,16 +85,24 @@ body {
 }
 
 @keyframes gradientIn {
-    from { transform: translateY(-100%); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 @keyframes gradientOut {
-    to { opacity: 0; }
+    to {
+        opacity: 0;
+    }
 }
 
 /* =========================
-   CONTENT FADE
+   CONTENT FADE-IN
 ========================= */
 .fade-in {
     opacity: 0;
@@ -100,7 +111,9 @@ body {
 }
 
 @keyframes contentFade {
-    to { opacity: 1; }
+    to {
+        opacity: 1;
+    }
 }
 
 /* =========================
@@ -152,7 +165,7 @@ body {
 }
 
 /* =========================
-   HERO
+   HOME HERO
 ========================= */
 .hero {
     min-height: calc(100vh - 90px);
@@ -171,11 +184,11 @@ body {
 }
 
 /* =========================
-   PROFILE GRADIENT
+   PROFILE-CENTERED GRADIENT
 ========================= */
 .profile-gradient {
     position: absolute;
-    top: 140px;
+    top: 190px; /* aligned to profile center */
     left: 50%;
     transform: translateX(-50%);
     width: 420px;
@@ -230,7 +243,7 @@ body {
 }
 
 /* =========================
-   BUTTONS
+   CTA BUTTONS
 ========================= */
 .hero-links {
     margin-top: 2rem;
@@ -256,6 +269,38 @@ body {
 }
 
 /* =========================
+   CONTENT PAGES
+========================= */
+.content {
+    padding: 4rem 2rem;
+    min-height: calc(100vh - 120px);
+    position: relative;
+    z-index: 2;
+}
+
+.content-inner {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.page-title {
+    font-size: 3.2rem;
+    font-weight: 900;
+    margin-bottom: 2.5rem;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    margin: 3rem 0 1.5rem;
+    color: var(--royal-blue);
+}
+
+.content-text {
+    font-size: 1.25rem;
+    line-height: 1.7;
+}
+
+/* =========================
    FOOTER
 ========================= */
 .footer {
@@ -265,32 +310,59 @@ body {
 }
 
 /* =========================
-   RESPONSIVE
+   MOBILE REFINEMENT
 ========================= */
 @media (max-width: 768px) {
+
     .dot-lines {
         display: none;
     }
 
-    .profile-gradient {
-        width: 300px;
-        height: 300px;
-        top: 110px;
+    .page-frame {
+        width: 8px;
+    }
+
+    .top-nav {
+        gap: 2rem;
+    }
+
+    .top-nav a {
+        font-size: 1.35rem;
+    }
+
+    .hero {
+        align-items: flex-start;
+        padding-top: 3rem;
+    }
+
+    .hero-content {
+        max-width: 520px;
     }
 
     .hero-image {
-        width: 170px;
+        width: 190px;
+        margin-top: 0.5rem;
     }
 
     .hero-title {
-        font-size: 2.6rem;
+        font-size: 3rem;
     }
 
     .hero-description {
-        font-size: 1.15rem;
+        font-size: 1.25rem;
     }
 
-    .page-frame {
-        width: 8px;
+    .profile-gradient {
+        top: 150px;
+        width: 320px;
+        height: 320px;
+    }
+
+    .page-title {
+        font-size: 2.6rem;
+    }
+
+    .content-text {
+        font-size: 1.15rem;
     }
 }
