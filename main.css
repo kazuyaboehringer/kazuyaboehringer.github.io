@@ -164,13 +164,16 @@ body {
     opacity: 1;
 }
 
-/* Footer outside dotted line */
+/* Footer inside dotted line */
 .footer {
-    margin-left: 0;
+    max-width: 900px;
+    margin: 0 auto;
     padding: 3rem 2rem;
+    padding-left: clamp(4rem, 7vw, 7rem);
     text-align: center;
     font-size: 0.9rem;
 }
+
 
 /* MOBILE — MUCH LARGER */
 @media (max-width: 768px) {
