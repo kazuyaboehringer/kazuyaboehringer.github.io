@@ -8,12 +8,15 @@
 }
 
 /* =========================
-   THEME
+   COLOR SYSTEM
 ========================= */
 :root {
     --black: #000;
     --white: #fff;
-    --red: #c40000;
+
+    /* Blues */
+    --royal-blue: #1f3cff;     /* text accents */
+    --sky-blue: #8ecbff;       /* borders / gradients */
 }
 
 /* =========================
@@ -28,7 +31,7 @@ body {
 }
 
 /* =========================
-   RIGHT-SIDE RED FRAME
+   RIGHT FRAME
 ========================= */
 .page-frame {
     position: fixed;
@@ -36,38 +39,42 @@ body {
     right: 0;
     width: 12px;
     height: 100vh;
-    background: var(--red);
-    z-index: 2;
+    background: var(--sky-blue);
+    z-index: 1;
 }
 
 /* =========================
-   LOADING GRADIENT
+   LOADING GRADIENT (2 STAGE)
 ========================= */
 .loading-gradient {
     position: fixed;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background:
-        radial-gradient(
-            circle at center 40%,
-            rgba(196, 0, 0, 0.85),
-            rgba(196, 0, 0, 0.15),
-            rgba(255, 255, 255, 0) 70%
-        );
+    inset: 0;
     z-index: 5;
-    animation: dropGradient 1.2s ease-out forwards,
-               fadeGradient 1.2s ease-out 1.2s forwards;
+    pointer-events: none;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(142, 203, 255, 0.95),
+            rgba(142, 203, 255, 0.6),
+            rgba(255, 255, 255, 0)
+        );
+    animation:
+        gradientIn 1.1s ease-out forwards,
+        gradientOut 1.1s ease-out 1.1s forwards;
 }
 
-@keyframes dropGradient {
+@keyframes gradientIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
     to {
-        top: 0;
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 
-@keyframes fadeGradient {
+@keyframes gradientOut {
     to {
         opacity: 0.25;
         filter: saturate(40%);
@@ -75,7 +82,7 @@ body {
 }
 
 /* =========================
-   FADE-IN CONTENT
+   FADE CONTENT IN AFTER
 ========================= */
 .fade-in {
     opacity: 0;
@@ -93,7 +100,9 @@ body {
    TOP BAR
 ========================= */
 .top-bar {
-    padding: 1.8rem 0;
+    padding: 1.9rem 0;
+    position: relative;
+    z-index: 3;
 }
 
 .top-nav {
@@ -103,17 +112,37 @@ body {
 }
 
 .top-nav a {
+    text-decoration: none;
+    color: var(--black);
     font-size: 1.15rem;
     font-weight: 700;
-    color: var(--black);
-    text-decoration: none;
-    letter-spacing: 0.6px;
-    transition: transform 0.25s ease, color 0.25s ease;
+    position: relative;
 }
 
-.top-nav a:hover {
-    transform: translateY(-4px);
-    color: var(--red);
+.top-nav a span {
+    display: inline-block;
+    transition: transform 0.25s ease;
+}
+
+.top-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: var(--royal-blue);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.25s ease;
+}
+
+.top-nav a:hover span {
+    transform: scale(1.08);
+}
+
+.top-nav a:hover::after {
+    transform: scaleX(1);
 }
 
 /* =========================
@@ -125,6 +154,8 @@ body {
     align-items: center;
     justify-content: center;
     padding: 5rem 2rem;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-content {
@@ -154,7 +185,7 @@ body {
 }
 
 .hero-description strong {
-    color: var(--red);
+    color: var(--royal-blue);
 }
 
 .contact {
@@ -169,7 +200,7 @@ body {
 }
 
 .contact a:hover {
-    color: var(--red);
+    color: var(--royal-blue);
 }
 
 /* =========================
@@ -188,12 +219,11 @@ body {
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 700;
-    letter-spacing: 0.6px;
     transition: transform 0.25s ease, background-color 0.25s ease;
 }
 
 .hero-links .btn:hover {
-    background: var(--red);
+    background: var(--royal-blue);
     transform: translateY(-6px);
 }
 
