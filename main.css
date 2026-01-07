@@ -27,7 +27,7 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    width: 12px;
+    width: 30px;
     height: 100vh;
     background: rgba(158,212,255,.5);
     z-index: 1;
@@ -37,6 +37,12 @@ body {
     position: fixed;
     left: 6%;
     top: 0;
+    bottom: 0;
+    border-left: 4px dotted #9ed4ff;
+}
+.dot-lines {
+    position: fixed;
+    top: 6%;
     bottom: 0;
     border-left: 4px dotted #9ed4ff;
 }
