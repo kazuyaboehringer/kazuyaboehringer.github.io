@@ -22,6 +22,16 @@ body {
     100% { opacity: 0; pointer-events: none; }
 }
 
+/* border */
+.page-frame {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 12px;
+    height: 100vh;
+    background: rgba(158,212,255,.5);
+    z-index: 1;
+}
 /* Dotted boundary */
 .dot-lines {
     position: fixed;
