@@ -140,12 +140,12 @@ body {
 /* Gradient layer */
 .profile-gradient {
     position: absolute;
-    width: 700px;
-    height: 700px;
+    width: 900px;
+    height: 900px;
     background: radial-gradient(
         circle,
         rgba(158,212,255,0.45),
-        transparent 70%
+        transparent 80%
     );
     z-index: 0;
 }
@@ -165,7 +165,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: scale(1.2) translate(7%, -4%); /* zoom + position */
+    transform: scale(1.2) translate(7%, 0%); /* zoom + position */
     object-position: center 35%; /* subtle face zoom */
     display: block;
 }
