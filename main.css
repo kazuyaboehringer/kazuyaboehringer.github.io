@@ -502,3 +502,17 @@ body {
     transform: scaleX(1);
 }
 
+.home-photo-block {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 3.5rem 0;
+}
+
+.home-photo {
+    width: 100%;
+    max-width: 780px;
+    border-radius: 18px;
+    object-fit: cover;
+    display: block;
+}
