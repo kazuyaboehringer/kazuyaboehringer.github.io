@@ -438,3 +438,36 @@ body {
 .btn.soft:hover::after {
     transform: scaleX(1);
 }
+
+
+/* email link */
+.email-link {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.75);
+    font-weight: 500;
+    position: relative;
+    transition: color 0.25s ease;
+}
+
+/* subtle underline reveal */
+.email-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.15em;
+    width: 100%;
+    height: 2px;
+    background: rgba(0, 59, 115, 0.35); /* soft royal blue */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+}
+
+.email-link:hover {
+    color: #003b73;
+}
+
+.email-link:hover::after {
+    transform: scaleX(1);
+}
+
