@@ -129,7 +129,7 @@ body {
     position: absolute;
     inset: -400px;
     background: radial-gradient(circle, rgba(158,212,255,.5), transparent 70%);
-    z-index: -1;
+    z-index: -2;
 }
 
 /* ============================
@@ -148,8 +148,8 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: translate(8%, 4%);
-    object-position: center 50%; /* subtle face zoom */
+    transform: scale(1.5) translate(8%, -4%); /* zoom + position */
+    object-position: center 35%; /* subtle face zoom */
     display: block;
 }
 
