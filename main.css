@@ -41,7 +41,7 @@ body {
     border-left: 2px dotted #9ed4ff;
 }
 .dot-lines-top {
-    position: fixed;
+    position: relative;
     top: 10%;
     left: 0;
     right: 0;
