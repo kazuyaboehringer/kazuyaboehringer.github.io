@@ -1,5 +1,10 @@
 * { box-sizing: border-box; }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     margin: 0;
     font-family: "Source Sans 3", sans-serif;
@@ -82,8 +87,13 @@ body {
 .top-nav {
     display: flex;
     justify-content: center;
-    gap: 3.5rem;
+    flex-wrap: wrap;
+    row-gap: 0.6rem;
+    column-gap: 1.4rem;
+    max-width: 100%;
+    padding: 0 1rem;
 }
+
 
 .top-nav a {
     text-decoration: none;
@@ -171,8 +181,9 @@ body {
 /* Gradient layer */
 .profile-gradient {
     position: absolute;
-    width: 1000px;
-    height: 1000px;
+    inset: 0;
+    transform: scale(1.6);
+    pointer-events: none;
     background: radial-gradient(
         circle,
         rgba(24,99,255,0.3),
@@ -302,6 +313,10 @@ body {
         display: none;
     }
 
+    .page-frame {
+        display: none;
+    }
+
     /* TOP BAR — clean + tappable */
     .top-bar {
         padding: 1.8rem 0;
@@ -312,8 +327,8 @@ body {
     }
 
     .top-nav a {
-        font-size: 1.2rem;
-        padding: 0.4rem 0.3rem;
+        font-size: 1.1rem;
+        white-space: nowrap;
     }
 
     /* HERO */
@@ -397,6 +412,7 @@ body {
         font-size: 0.9rem;
         padding: 2rem 1rem;
     }
+    
 }
 
 
