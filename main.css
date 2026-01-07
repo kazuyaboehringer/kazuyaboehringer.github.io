@@ -34,7 +34,7 @@ body {
 }
 /* Dotted boundary */
 .dot-lines {
-    position: relative;
+    position: fixed;
     left: 6%;
     top: 0;
     bottom: 0;
@@ -42,7 +42,7 @@ body {
 }
 .dot-lines-top {
     position: fixed;
-    top: 8%;
+    top: 10%;
     left: 0;
     right: 0;
     border-top: 2px dotted #9ed4ff;
