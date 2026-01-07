@@ -142,6 +142,8 @@ body {
 .hero {
     padding-top: 6rem;
     padding-bottom: 5rem;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-content {
@@ -192,6 +194,8 @@ body {
     z-index: 0;
 }
 
+
+
 /* Profile image container */
 .profile-wrapper {
     width: 300px;
@@ -199,8 +203,9 @@ body {
     border-radius: 50%;
     overflow: hidden;
     position: relative;
-    z-index: 1; /* above gradient */
+    z-index: 2; /* above gradient */
 }
+
 
 
 .hero-image {
