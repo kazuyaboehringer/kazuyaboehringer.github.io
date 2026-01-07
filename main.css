@@ -99,13 +99,14 @@ body {
 
 /* HERO */
 .hero {
-    padding-top: 4rem;
+    padding-top: 6rem;
+    padding-bottom: 5rem;
 }
 
 .hero-content {
-    max-width: 1200px;
+    max-width: 1400px;   /* wider canvas */
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -136,7 +137,7 @@ body {
    ============================ */
 
 .profile-wrapper {
-    width: 240px;
+    width: 300px;              /* larger circle */
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     overflow: hidden;
@@ -146,37 +147,43 @@ body {
 .hero-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;       /* CRITICAL */
-    object-position: center; /* FACE CENTERING */
+    object-fit: cover;
+    object-position: center 35%; /* subtle face zoom */
     display: block;
 }
 
 
-
 .hero-title {
-    font-size: 3rem;
+    font-size: 3.6rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.8rem;
 }
 
 .hero-description {
-    font-size: 1.2rem;
-    line-height: 1.6;
+    font-size: 1.4rem;
+    line-height: 1.75;
+    max-width: 900px;
+    margin-bottom: 2.4rem;
+}
+
+.contact {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
 }
 
 .hero-links {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
-    margin-top: 2rem;
+    gap: 2.2rem;
+    margin-top: 3rem;
 }
 
 .btn.soft {
-    padding: 1rem 2.5rem;
-    border-radius: 14px;
-    background: rgba(158,212,255,.25);
-    text-decoration: none;
-    color: #003b73;
-    font-weight: 700;
+    padding: 1.3rem 3.4rem;
+    font-size: 1.2rem;
+    border-radius: 18px;
 }
+
 
 /* CONTENT PAGES */
 .content-inner {
@@ -262,23 +269,33 @@ body {
         padding: 0.6rem 0.4rem;
     }
 
-    /* HERO LAYOUT */
+/* HERO + PROFILE SECTION */
     .hero {
-        padding-top: 3rem;
+        padding-top: 4rem;
     }
 
-    .hero-content {
-        padding: 0 1.2rem;
+    .profile-wrapper {
+        width: 360px;
     }
 
-    /* PROFILE IMAGE — MUCH LARGER */
-    .hero-image {
-        width: 340px;
+    .hero-title {
+        font-size: 4.6rem;
     }
 
-    .profile-gradient {
-        inset: -140px;
+    .hero-description {
+        font-size: 2.1rem;
+        line-height: 2;
     }
+
+    .contact {
+        font-size: 1.8rem;
+    }
+
+    .btn.soft {
+        font-size: 1.7rem;
+        padding: 2rem 0;
+    }
+
 
     /* TEXT BLOCK — FEWER CHARS PER LINE */
     .text-block {
