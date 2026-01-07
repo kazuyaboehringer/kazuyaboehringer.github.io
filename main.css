@@ -148,8 +148,8 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: translate(15%, 4%);
-    object-position: center 35%; /* subtle face zoom */
+    transform: translate(8%, 4%);
+    object-position: center 50%; /* subtle face zoom */
     display: block;
 }
 
