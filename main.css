@@ -36,13 +36,13 @@ body {
 .dot-lines {
     position: fixed;
     left: 6%;
-    top: 0;
+    top: 10;
     bottom: 0;
     border-left: 2px dotted #9ed4ff;
 }
 .dot-lines-top {
-    position: fixed;
-    top: 12%;
+    position: relative;
+    top: 10%;
     left: 0;
     right: 0;
     border-top: 2px dotted #9ed4ff;
