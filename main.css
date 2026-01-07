@@ -329,3 +329,38 @@ body {
         padding: 2.8rem 1.2rem;
     }
 }
+/* ============================
+   BOTTOM BUTTON INTERACTION
+   ============================ */
+
+.btn.soft {
+    position: relative;
+    overflow: hidden;
+    transition:
+        transform 0.25s cubic-bezier(.2,.8,.2,1),
+        box-shadow 0.25s ease;
+}
+
+/* underline bar */
+.btn.soft::after {
+    content: "";
+    position: absolute;
+    left: 10%;
+    bottom: 12%;
+    width: 80%;
+    height: 3px;
+    background: #003b73; /* royal blue */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+/* hover interaction */
+.btn.soft:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+}
+
+.btn.soft:hover::after {
+    transform: scaleX(1);
+}
