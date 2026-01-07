@@ -510,7 +510,7 @@ body {
 }
 
 .home-photo {
-    width: 40%;
+    width: 50%;
     max-width: 780px;
     border-radius: 18px;
     object-fit: cover;
