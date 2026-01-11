@@ -184,28 +184,47 @@
 </main>
 
 <footer class="footer fade-in">© 2026 Kazuya Boehringer</footer>
-    <script src="https://www.youtube.com/iframe_api"></script>
+
+
+<script src="https://www.youtube.com/iframe_api"></script>
 <script>
 const ytPlayers = {};
+const ytReady = {};
 
 function onYouTubeIframeAPIReady() {
     document.querySelectorAll('iframe[id^="yt-player"]').forEach(iframe => {
-        ytPlayers[iframe.id] = new YT.Player(iframe.id);
+        ytPlayers[iframe.id] = new YT.Player(iframe.id, {
+            events: {
+                onReady: () => {
+                    ytReady[iframe.id] = true;
+                }
+            }
+        });
     });
 }
 
 document.addEventListener('click', function(e) {
-    if (e.target.classList.contains('yt-timestamp')) {
-        e.preventDefault();
-        const playerId = e.target.dataset.player;
-        const t = parseFloat(e.target.dataset.time);
-        const player = ytPlayers[playerId];
-        if (player && player.seekTo) {
-            player.seekTo(t, true);
-            player.playVideo();
-        }
-    }
+    const link = e.target.closest('.yt-timestamp');
+    if (!link) return;
+
+    e.preventDefault();
+
+    const playerId = link.dataset.player;
+    const time = parseFloat(link.dataset.time);
+    const player = ytPlayers[playerId];
+
+    if (!player || !ytReady[playerId]) return;
+
+    // Force accurate seeking even on long videos
+    player.seekTo(time, true);
+    player.playVideo();
+
+    // Safety re-seek after a tiny delay (fixes 0:00 bug)
+    setTimeout(() => {
+        player.seekTo(time, true);
+    }, 120);
 });
 </script>
+
 </body>
 </html>
