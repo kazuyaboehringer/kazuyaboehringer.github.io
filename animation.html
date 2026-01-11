@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="main.css">
 </head>
+<script src="https://www.youtube.com/iframe_api"></script>
 <body>
 
 <div class="loading-gradient"></div>
@@ -35,7 +36,8 @@
 <div class="video-block">
     <div class="video-embed">
         <iframe 
-            src="https://www.youtube.com/embed/iX2ejdQt674"
+            id="yt-player-1"
+            src="https://www.youtube.com/embed/iX2ejdQt674?enablejsapi=1"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -43,11 +45,12 @@
         </iframe>
     </div>
     <p class="video-description">
-    Highlights:
-    <a href="https://www.youtube.com/watch?v=iX2ejdQt674" target="_blank">0:05</a> Opening,
-    <a href="https://www.youtube.com/watch?v=iX2ejdQt674" target="_blank">0:18</a> Walk,
-    <a href="https://www.youtube.com/watch?v=iX2ejdQt674" target="_blank">0:42</a> Acting
-</p>
+        Highlights:
+        <a href="#" class="yt-timestamp" data-time="5">0:05</a> Opening,
+        <a href="#" class="yt-timestamp" data-time="18">0:18</a> Walk cycle,
+        <a href="#" class="yt-timestamp" data-time="42">0:42</a> Acting close-up
+    </p>
+
 </div>
 
 <div class="video-overlay"></div>
@@ -77,6 +80,23 @@
 </main>
 
 <footer class="footer fade-in">© 2026 Kazuya Boehringer</footer>
+<script>
+let ytPlayer;
 
+function onYouTubeIframeAPIReady() {
+    ytPlayer = new YT.Player('yt-player-1');
+}
+
+document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('yt-timestamp')) {
+        e.preventDefault();
+        const t = parseFloat(e.target.dataset.time);
+        if (ytPlayer && ytPlayer.seekTo) {
+            ytPlayer.seekTo(t, true);
+            ytPlayer.playVideo();
+        }
+    }
+});
+</script>
 </body>
 </html>
