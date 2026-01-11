@@ -80,20 +80,25 @@
 </main>
 
 <footer class="footer fade-in">© 2026 Kazuya Boehringer</footer>
+    <script src="https://www.youtube.com/iframe_api"></script>
 <script>
-let ytPlayer;
+const ytPlayers = {};
 
 function onYouTubeIframeAPIReady() {
-    ytPlayer = new YT.Player('yt-player-1');
+    document.querySelectorAll('iframe[id^="yt-player"]').forEach(iframe => {
+        ytPlayers[iframe.id] = new YT.Player(iframe.id);
+    });
 }
 
 document.addEventListener('click', function(e) {
     if (e.target.classList.contains('yt-timestamp')) {
         e.preventDefault();
+        const playerId = e.target.dataset.player;
         const t = parseFloat(e.target.dataset.time);
-        if (ytPlayer && ytPlayer.seekTo) {
-            ytPlayer.seekTo(t, true);
-            ytPlayer.playVideo();
+        const player = ytPlayers[playerId];
+        if (player && player.seekTo) {
+            player.seekTo(t, true);
+            player.playVideo();
         }
     }
 });
