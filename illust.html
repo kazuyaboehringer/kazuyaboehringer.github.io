@@ -27,8 +27,7 @@
 
 <main class="content fade-in">
 <div class="content-inner">
-    
-    <!-- Image Gallery -->
+
     <section class="gallery">
         <img src="images/illustration1.jpg" alt="Illustration 1" class="gallery-item">
         <img src="images/illustration2.jpg" alt="Illustration 2" class="gallery-item">
@@ -36,10 +35,33 @@
         <img src="images/illustration4.jpg" alt="Illustration 4" class="gallery-item">
     </section>
 
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <img src="" alt="">
+    </div>
+
 </div>
 </main>
 
 <footer class="footer fade-in">© 2026 Kazuya Boehringer</footer>
+
+
+<script>
+const images = document.querySelectorAll('.gallery-item');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox.querySelector('img');
+
+images.forEach(img => {
+    img.addEventListener('click', () => {
+        lightbox.classList.add('active');
+        lightboxImg.src = img.src;
+    });
+});
+
+lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+});
+</script>
 
 </body>
 </html>
