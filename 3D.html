@@ -1,1 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2D Animation – Kazuya Boehringer</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<div class="loading-gradient"></div>
+<div class="page-frame"></div>
+<div class="dot-lines"></div>
+<div class="dot-lines-top"></div>
+
+
+<header class="top-bar fade-in">
+<nav class="top-nav">
+    <a href="index.html"><span>Home</span></a>
+    <a href="animation.html"><span>2D Animation</span></a>
+    <a href="3D.html"><span>3D Animation</span></a>
+    <a href="storyboards.html"><span>Storyboards</span></a>
+    <a href="illust.html"><span>Illustration</span></a>
+    <a href="credits.html"><span>Credits</span></a>
+</nav>
+</header>
+
+<main class="content fade-in">
+<div class="content-inner">
+
+<h1 class="page-title">3D Animation</h1>
+
+<h2 class="section-title">Personal</h2>
+
+<div class="video-block">
+    <video controls src="assets/Megumi1.mp4"></video>
+   <!-- <p class="video-description">Jujutsu Kaisen test fan animation<br>layout (LO)</p>-->
+</div>
+
+<div class="video-block">
+    <video controls src="assets/c2-12_test.mp4"></video>
+    <p class="video-description">short film (in production) - Columbia Universty Animation Team (Studio Dimension)<br>layout (LO) + key animation (原画)</p>
+</div>
+
+<div class="video-block">
+    <video controls src="assets/Test1.mp4"></video>
+    <p class="video-description">gun raise test cut<br>layout (LO)</p>
+</div>
+
+<div class="video-block">
+    <video controls src="assets/Aki test rough.mp4"></video>
+    <p class="video-description">sword swinging test cut<br>rough layout (LO) - WIP</p>
+</div>
+
+
+<div class="video-overlay"></div>
+
+</div>
+</main>
+
+<footer class="footer fade-in">© 2026 Kazuya Boehringer</footer>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+const ytPlayers = {};
+const ytReady = {};
+
+function onYouTubeIframeAPIReady() {
+    document.querySelectorAll('iframe[id^="yt-player"]').forEach(iframe => {
+        ytPlayers[iframe.id] = new YT.Player(iframe.id, {
+            events: {
+                onReady: () => ytReady[iframe.id] = true
+            }
+        });
+    });
+}
+
+function parseTime(timeStr) {
+    if (timeStr.includes(':')) {
+        const parts = timeStr.split(':').map(Number);
+        if (parts.length === 2) return parts[0] * 60 + parts[1];
+        if (parts.length === 3) return parts[0] * 3600 + parts[1] * 60 + parts[2];
+    }
+    return Number(timeStr);
+}
+
+document.addEventListener('click', function(e) {
+    const link = e.target.closest('.yt-timestamp');
+    if (!link) return;
+
+    e.preventDefault();
+
+    const playerId = link.dataset.player;
+    const time = parseTime(link.dataset.time);
+    const player = ytPlayers[playerId];
+
+    if (!player || !ytReady[playerId]) return;
+
+    player.seekTo(time, true);
+    player.playVideo();
+
+    // hard sync fix for long videos
+    setTimeout(() => player.seekTo(time, true), 150);
+});
+</script>
+
+
+</body>
+</html>
