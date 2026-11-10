@@ -626,3 +626,201 @@ body {
 }
 
 
+
+
+
+/* =========================
+   STORYBOARD PORTFOLIO
+   ========================= */
+
+.storyboard-sequence {
+    margin-bottom: 80px;
+}
+
+.sequence-header {
+    margin-bottom: 35px;
+}
+
+.sequence-title {
+    margin-bottom: 10px;
+}
+
+.sequence-description {
+    max-width: 800px;
+    margin-bottom: 30px;
+}
+
+/* Animatic */
+
+.sequence-animatic {
+    margin-bottom: 50px;
+}
+
+.animatic-title {
+    margin-bottom: 15px;
+}
+
+.sequence-animatic .video-block {
+    margin-bottom: 0;
+}
+
+/* Storyboard strip */
+
+.storyboard-strip {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 30px 18px;
+    width: 100%;
+}
+
+.storyboard-panel {
+    min-width: 0;
+}
+
+.panel-number {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 7px;
+    color: #333;
+}
+
+.panel-image-button {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.storyboard-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid rgba(158, 212, 255, 0.7);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.panel-image-button:hover .storyboard-image {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.panel-description {
+    margin-top: 8px;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: #555;
+}
+
+/* Storyboard lightbox */
+
+.storyboard-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.storyboard-lightbox.active {
+    display: flex;
+}
+
+.storyboard-lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    border: none;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.lightbox-close {
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+}
+
+.lightbox-prev,
+.lightbox-next {
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+    padding: 20px;
+}
+
+.lightbox-prev {
+    left: 20px;
+}
+
+.lightbox-next {
+    right: 20px;
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    opacity: 0.7;
+}
+
+/* =========================
+   RESPONSIVE STORYBOARD GRID
+   ========================= */
+
+@media (max-width: 1000px) {
+    .storyboard-strip {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 750px) {
+    .storyboard-strip {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 25px 14px;
+    }
+}
+
+@media (max-width: 550px) {
+    .storyboard-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px 12px;
+    }
+
+    .storyboard-sequence {
+        margin-bottom: 60px;
+    }
+
+    .storyboard-lightbox {
+        padding: 20px;
+    }
+
+    .storyboard-lightbox img {
+        max-width: 95vw;
+        max-height: 85vh;
+    }
+
+    .lightbox-prev {
+        left: 5px;
+    }
+
+    .lightbox-next {
+        right: 5px;
+    }
+}
+
