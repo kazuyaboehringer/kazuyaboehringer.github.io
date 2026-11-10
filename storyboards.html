@@ -1,964 +1,903 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Storyboards – Kazuya Boehringer</title>
 
-    <title>Storyboards — Kazuya Boehringer</title>
-
-    <link rel="stylesheet" href="main.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="main.css">
 </head>
 
 <body>
 
-    <!-- Loading gradient -->
-    <div class="loading-gradient"></div>
+<div class="loading-gradient"></div>
+<div class="page-frame"></div>
+<div class="dot-lines"></div>
+<div class="dot-lines-top"></div>
 
-    <!-- Right page border -->
-    <div class="page-frame"></div>
 
-    <!-- Left dotted boundary -->
-    <div class="dot-lines"></div>
+<header class="top-bar fade-in">
+<nav class="top-nav">
+    <a href="index.html"><span>Home</span></a>
+    <a href="animation.html"><span>2D Animation</span></a>
+    <a href="3D.html"><span>3D Animation</span></a>
+    <a href="storyboards.html"><span>Storyboards</span></a>
+    <a href="illust.html"><span>Illustration</span></a>
+    <a href="credits.html"><span>Credits</span></a>
+</nav>
+</header>
 
-    <!-- Top horizontal boundary -->
-    <div class="dot-lines-top"></div>
 
+<main class="content fade-in">
+<div class="content-inner">
 
-    <!-- Navigation -->
-    <header class="top-bar">
 
-        <nav class="top-nav">
+<h1 class="page-title">Storyboards</h1>
 
-            <a href="index.html">
-                <span>Home</span>
-            </a>
 
-            <a href="animation.html">
-                <span>2D Animation</span>
-            </a>
+<h2 class="section-title">Professional</h2>
 
-            <a href="3d.html">
-                <span>3D Animation</span>
-            </a>
+<div class="video-block">
 
-            <a href="storyboards.html">
-                <span>Storyboards</span>
-            </a>
+    <div class="video-embed">
+        <iframe
+            id="yt-player-1"
+            src="https://www.youtube.com/embed/YOUR_VIDEO_ID?enablejsapi=1"
+            title="Professional Storyboard Reel"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
 
-            <a href="illustration.html">
-                <span>Illustration</span>
-            </a>
+    <p class="video-description">
+        <strong>Professional Storyboard Work</strong><br>
+        Selected storyboard work from professional productions.
+    </p>
 
-            <a href="credits.html">
-                <span>Credits</span>
-            </a>
+</div>
 
-        </nav>
+<div class="video-overlay"></div>
 
-    </header>
 
+<h2 class="section-title">Personal</h2>
 
-    <!-- Main content -->
-    <main>
 
-        <div class="content-inner">
+<!-- =========================================================
+     SEQUENCE 01
+     ========================================================= -->
 
+<div class="storyboard-sequence">
 
-            <!-- PAGE TITLE -->
+    <div class="sequence-header">
 
-            <h1 class="page-title">
-                Storyboards
-            </h1>
+        <h3 class="sequence-title">
+            Sequence 01
+        </h3>
 
-
-            <!-- PROFESSIONAL -->
-
-            <section>
-
-                <h2 class="section-title">
-                    Professional
-                </h2>
-
-
-                <div class="video-block">
-
-                    <div class="video-embed">
-
-                        <iframe
-                            src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-                            title="Professional Storyboard Reel"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
-
-                    </div>
-
-                </div>
-
-
-                <p class="video-description">
-                    Selected professional storyboard work.
-                </p>
-
-            </section>
-
-
-
-            <!-- PERSONAL PROJECTS -->
-
-            <section>
-
-                <h2 class="section-title">
-                    Personal Projects
-                </h2>
-
-
-                <!-- =====================================================
-                     SEQUENCE 01
-                     ===================================================== -->
-
-                <div class="storyboard-sequence">
-
-
-                    <!-- SEQUENCE TITLE -->
-
-                    <div class="sequence-header">
-
-                        <h3 class="sequence-title">
-                            Sequence 01
-                        </h3>
-
-                        <p class="sequence-description">
-                            Description of the sequence goes here.
-                            Briefly explain what is happening, the purpose
-                            of the sequence, or any other relevant context.
-                        </p>
-
-                    </div>
-
-
-                    <!-- ANIMATIC -->
-
-                    <div class="sequence-animatic">
-
-                        <h4 class="animatic-title">
-                            Animatic
-                        </h4>
-
-                        <div class="video-block">
-
-                            <video
-                                controls
-                                preload="metadata"
-                                src="assets/storyboards/sequence-01/animatic.mp4">
-                            </video>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- STORYBOARD PANELS -->
-
-                    <div class="storyboard-strip">
-
-
-                        <!-- BOARD 01 -->
-
-                        <div class="storyboard-panel">
-
-                            <div class="panel-number">
-                                01
-                            </div>
-
-                            <button
-                                class="panel-image-button"
-                                type="button"
-                                onclick="openStoryboardLightbox(this)"
-                                data-image="assets/storyboards/sequence-01/board-01.jpg">
-
-                                <img
-                                    class="storyboard-image"
-                                    src="assets/storyboards/sequence-01/board-01.jpg"
-                                    alt="Sequence 01 storyboard panel 01">
-
-                            </button>
-
-                            <p class="panel-description">
-                                Dialogue or action description goes here.
-                            </p>
-
-                        </div>
-
-
-                        <!-- BOARD 02 -->
-
-                        <div class="storyboard-panel">
-
-                            <div class="panel-number">
-                                02
-                            </div>
-
-                            <button
-                                class="panel-image-button"
-                                type="button"
-                                onclick="openStoryboardLightbox(this)"
-                                data-image="assets/storyboards/sequence-01/board-02.jpg">
-
-                                <img
-                                    class="storyboard-image"
-                                    src="assets/storyboards/sequence-01/board-02.jpg"
-                                    alt="Sequence 01 storyboard panel 02">
-
-                            </button>
-
-                            <p class="panel-description">
-                                Dialogue or action description goes here.
-                            </p>
-
-                        </div>
-
-
-                        <!-- BOARD 03 -->
-
-                        <div class="storyboard-panel">
-
-                            <div class="panel-number">
-                                03
-                            </div>
-
-                            <button
-                                class="panel-image-button"
-                                type="button"
-                                onclick="openStoryboardLightbox(this)"
-                                data-image="assets/storyboards/sequence-01/board-03.jpg">
-
-                                <img
-                                    class="storyboard-image"
-                                    src="assets/storyboards/sequence-01/board-03.jpg"
-                                    alt="Sequence 01 storyboard panel 03">
-
-                            </button>
-
-                            <p class="panel-description">
-                                Dialogue or action description goes here.
-                            </p>
-
-                        </div>
-
-
-                        <!-- BOARD 04 -->
-
-                        <div class="storyboard-panel">
-
-                            <div class="panel-number">
-                                04
-                            </div>
-
-                            <button
-                                class="panel-image-button"
-                                type="button"
-                                onclick="openStoryboardLightbox(this)"
-                                data-image="assets/storyboards/sequence-01/board-04.jpg">
-
-                                <img
-                                    class="storyboard-image"
-                                    src="assets/storyboards/sequence-01/board-04.jpg"
-                                    alt="Sequence 01 storyboard panel 04">
-
-                            </button>
-
-                            <p class="panel-description">
-                                Dialogue or action description goes here.
-                            </p>
-
-                        </div>
-
-
-                        <!-- BOARD 05 -->
-
-                        <div class="storyboard-panel">
-
-                            <div class="panel-number">
-                                05
-                            </div>
-
-                            <button
-                                class="panel-image-button"
-                                type="button"
-                                onclick="openStoryboardLightbox(this)"
-                                data-image="assets/storyboards/sequence-01/board-05.jpg">
-
-                                <img
-                                    class="storyboard-image"
-                                    src="assets/storyboards/sequence-01/board-05.jpg"
-                                    alt="Sequence 01 storyboard panel 05">
-
-                            </button>
-
-                            <p class="panel-description">
-                                Dialogue or action description goes here.
-                            </p>
-
-                        </div>
-
-
-                        <!-- BOARD 06 -->
-
-                        <div class="storyboard-panel">
-
-                            <div class="panel-number">
-                                06
-                            </div>
-
-                            <button
-                                class="panel-image-button"
-                                type="button"
-                                onclick="openStoryboardLightbox(this)"
-                                data-image="assets/storyboards/sequence-01/board-06.jpg">
-
-                                <img
-                                    class="storyboard-image"
-                                    src="assets/storyboards/sequence-01/board-06.jpg"
-                                    alt="Sequence 01 storyboard panel 06">
-
-                            </button>
-
-                            <p class="panel-description">
-                                Dialogue or action description goes here.
-                            </p>
-
-                        </div>
-
-
-                        <!-- BOARD 07 -->
-
-                        <div class="storyboard-panel">
-
-                            <div class="panel-number">
-                                07
-                            </div>
-
-                            <button
-                                class="panel-image-button"
-                                type="button"
-                                onclick="openStoryboardLightbox(this)"
-                                data-image="assets/storyboards/sequence-01/board-07.jpg">
-
-                                <img
-                                    class="storyboard-image"
-                                    src="assets/storyboards/sequence-01/board-07.jpg"
-                                    alt="Sequence 01 storyboard panel 07">
-
-                            </button>
-
-                            <p class="panel-description">
-                                Dialogue or action description goes here.
-                            </p>
-
-                        </div>
-
-
-                        <!-- BOARD 08 -->
-
-                        <div class="storyboard-panel">
-
-                            <div class="panel-number">
-                                08
-                            </div>
-
-                            <button
-                                class="panel-image-button"
-                                type="button"
-                                onclick="openStoryboardLightbox(this)"
-                                data-image="assets/storyboards/sequence-01/board-08.jpg">
-
-                                <img
-                                    class="storyboard-image"
-                                    src="assets/storyboards/sequence-01/board-08.jpg"
-                                    alt="Sequence 01 storyboard panel 08">
-
-                            </button>
-
-                            <p class="panel-description">
-                                Dialogue or action description goes here.
-                            </p>
-
-                        </div>
-
-
-                        <!-- BOARD 09 -->
-
-                        <div class="storyboard-panel">
-
-                            <div class="panel-number">
-                                09
-                            </div>
-
-                            <button
-                                class="panel-image-button"
-                                type="button"
-                                onclick="openStoryboardLightbox(this)"
-                                data-image="assets/storyboards/sequence-01/board-09.jpg">
-
-                                <img
-                                    class="storyboard-image"
-                                    src="assets/storyboards/sequence-01/board-09.jpg"
-                                    alt="Sequence 01 storyboard panel 09">
-
-                            </button>
-
-                            <p class="panel-description">
-                                Dialogue or action description goes here.
-                            </p>
-
-                        </div>
-
-
-                        <!-- BOARD 10 -->
-
-                        <div class="storyboard-panel">
-
-                            <div class="panel-number">
-                                10
-                            </div>
-
-                            <button
-                                class="panel-image-button"
-                                type="button"
-                                onclick="openStoryboardLightbox(this)"
-                                data-image="assets/storyboards/sequence-01/board-10.jpg">
-
-                                <img
-                                    class="storyboard-image"
-                                    src="assets/storyboards/sequence-01/board-10.jpg"
-                                    alt="Sequence 01 storyboard panel 10">
-
-                            </button>
-
-                            <p class="panel-description">
-                                Dialogue or action description goes here.
-                            </p>
-
-                        </div>
-
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- =====================================================
-                     SEQUENCE 02
-                     ===================================================== -->
-
-                <div class="storyboard-sequence">
-
-
-                    <div class="sequence-header">
-
-                        <h3 class="sequence-title">
-                            Sequence 02
-                        </h3>
-
-                        <p class="sequence-description">
-                            Description of the sequence goes here.
-                        </p>
-
-                    </div>
-
-
-                    <!-- ANIMATIC -->
-
-                    <div class="sequence-animatic">
-
-                        <h4 class="animatic-title">
-                            Animatic
-                        </h4>
-
-                        <div class="video-block">
-
-                            <video
-                                controls
-                                preload="metadata"
-                                src="assets/storyboards/sequence-02/animatic.mp4">
-                            </video>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- STORYBOARD PANELS -->
-
-                    <div class="storyboard-strip">
-
-
-                        <!-- BOARD 01 -->
-
-                        <div class="storyboard-panel">
-
-                            <div class="panel-number">
-                                01
-                            </div>
-
-                            <button
-                                class="panel-image-button"
-                                type="button"
-                                onclick="openStoryboardLightbox(this)"
-                                data-image="assets/storyboards/sequence-02/board-01.jpg">
-
-                                <img
-                                    class="storyboard-image"
-                                    src="assets/storyboards/sequence-02/board-01.jpg"
-                                    alt="Sequence 02 storyboard panel 01">
-
-                            </button>
-
-                            <p class="panel-description">
-                                Dialogue or action description goes here.
-                            </p>
-
-                        </div>
-
-
-                        <!-- BOARD 02 -->
-
-                        <div class="storyboard-panel">
-
-                            <div class="panel-number">
-                                02
-                            </div>
-
-                            <button
-                                class="panel-image-button"
-                                type="button"
-                                onclick="openStoryboardLightbox(this)"
-                                data-image="assets/storyboards/sequence-02/board-02.jpg">
-
-                                <img
-                                    class="storyboard-image"
-                                    src="assets/storyboards/sequence-02/board-02.jpg"
-                                    alt="Sequence 02 storyboard panel 02">
-
-                            </button>
-
-                            <p class="panel-description">
-                                Dialogue or action description goes here.
-                            </p>
-
-                        </div>
-
-
-                        <!-- BOARD 03 -->
-
-                        <div class="storyboard-panel">
-
-                            <div class="panel-number">
-                                03
-                            </div>
-
-                            <button
-                                class="panel-image-button"
-                                type="button"
-                                onclick="openStoryboardLightbox(this)"
-                                data-image="assets/storyboards/sequence-02/board-03.jpg">
-
-                                <img
-                                    class="storyboard-image"
-                                    src="assets/storyboards/sequence-02/board-03.jpg"
-                                    alt="Sequence 02 storyboard panel 03">
-
-                            </button>
-
-                            <p class="panel-description">
-                                Dialogue or action description goes here.
-                            </p>
-
-                        </div>
-
-
-                        <!-- BOARD 04 -->
-
-                        <div class="storyboard-panel">
-
-                            <div class="panel-number">
-                                04
-                            </div>
-
-                            <button
-                                class="panel-image-button"
-                                type="button"
-                                onclick="openStoryboardLightbox(this)"
-                                data-image="assets/storyboards/sequence-02/board-04.jpg">
-
-                                <img
-                                    class="storyboard-image"
-                                    src="assets/storyboards/sequence-02/board-04.jpg"
-                                    alt="Sequence 02 storyboard panel 04">
-
-                            </button>
-
-                            <p class="panel-description">
-                                Dialogue or action description goes here.
-                            </p>
-
-                        </div>
-
-
-                        <!-- BOARD 05 -->
-
-                        <div class="storyboard-panel">
-
-                            <div class="panel-number">
-                                05
-                            </div>
-
-                            <button
-                                class="panel-image-button"
-                                type="button"
-                                onclick="openStoryboardLightbox(this)"
-                                data-image="assets/storyboards/sequence-02/board-05.jpg">
-
-                                <img
-                                    class="storyboard-image"
-                                    src="assets/storyboards/sequence-02/board-05.jpg"
-                                    alt="Sequence 02 storyboard panel 05">
-
-                            </button>
-
-                            <p class="panel-description">
-                                Dialogue or action description goes here.
-                            </p>
-
-                        </div>
-
-
-                        <!-- BOARD 06 -->
-
-                        <div class="storyboard-panel">
-
-                            <div class="panel-number">
-                                06
-                            </div>
-
-                            <button
-                                class="panel-image-button"
-                                type="button"
-                                onclick="openStoryboardLightbox(this)"
-                                data-image="assets/storyboards/sequence-02/board-06.jpg">
-
-                                <img
-                                    class="storyboard-image"
-                                    src="assets/storyboards/sequence-02/board-06.jpg"
-                                    alt="Sequence 02 storyboard panel 06">
-
-                            </button>
-
-                            <p class="panel-description">
-                                Dialogue or action description goes here.
-                            </p>
-
-                        </div>
-
-
-                        <!-- BOARD 07 -->
-
-                        <div class="storyboard-panel">
-
-                            <div class="panel-number">
-                                07
-                            </div>
-
-                            <button
-                                class="panel-image-button"
-                                type="button"
-                                onclick="openStoryboardLightbox(this)"
-                                data-image="assets/storyboards/sequence-02/board-07.jpg">
-
-                                <img
-                                    class="storyboard-image"
-                                    src="assets/storyboards/sequence-02/board-07.jpg"
-                                    alt="Sequence 02 storyboard panel 07">
-
-                            </button>
-
-                            <p class="panel-description">
-                                Dialogue or action description goes here.
-                            </p>
-
-                        </div>
-
-
-                        <!-- BOARD 08 -->
-
-                        <div class="storyboard-panel">
-
-                            <div class="panel-number">
-                                08
-                            </div>
-
-                            <button
-                                class="panel-image-button"
-                                type="button"
-                                onclick="openStoryboardLightbox(this)"
-                                data-image="assets/storyboards/sequence-02/board-08.jpg">
-
-                                <img
-                                    class="storyboard-image"
-                                    src="assets/storyboards/sequence-02/board-08.jpg"
-                                    alt="Sequence 02 storyboard panel 08">
-
-                            </button>
-
-                            <p class="panel-description">
-                                Dialogue or action description goes here.
-                            </p>
-
-                        </div>
-
-
-                        <!-- BOARD 09 -->
-
-                        <div class="storyboard-panel">
-
-                            <div class="panel-number">
-                                09
-                            </div>
-
-                            <button
-                                class="panel-image-button"
-                                type="button"
-                                onclick="openStoryboardLightbox(this)"
-                                data-image="assets/storyboards/sequence-02/board-09.jpg">
-
-                                <img
-                                    class="storyboard-image"
-                                    src="assets/storyboards/sequence-02/board-09.jpg"
-                                    alt="Sequence 02 storyboard panel 09">
-
-                            </button>
-
-                            <p class="panel-description">
-                                Dialogue or action description goes here.
-                            </p>
-
-                        </div>
-
-
-                        <!-- BOARD 10 -->
-
-                        <div class="storyboard-panel">
-
-                            <div class="panel-number">
-                                10
-                            </div>
-
-                            <button
-                                class="panel-image-button"
-                                type="button"
-                                onclick="openStoryboardLightbox(this)"
-                                data-image="assets/storyboards/sequence-02/board-10.jpg">
-
-                                <img
-                                    class="storyboard-image"
-                                    src="assets/storyboards/sequence-02/board-10.jpg"
-                                    alt="Sequence 02 storyboard panel 10">
-
-                            </button>
-
-                            <p class="panel-description">
-                                Dialogue or action description goes here.
-                            </p>
-
-                        </div>
-
-
-                    </div>
-
-                </div>
-
-
-            </section>
-
-        </div>
-
-    </main>
-
-
-    <!-- STORYBOARD LIGHTBOX -->
-
-    <div
-        class="storyboard-lightbox"
-        id="storyboardLightbox">
-
-        <button
-            class="lightbox-close"
-            type="button"
-            onclick="closeStoryboardLightbox()">
-            &times;
-        </button>
-
-        <button
-            class="lightbox-prev"
-            type="button"
-            onclick="previousStoryboard(event)">
-            &#10094;
-        </button>
-
-        <img
-            id="lightboxImage"
-            src=""
-            alt="Expanded storyboard panel">
-
-        <button
-            class="lightbox-next"
-            type="button"
-            onclick="nextStoryboard(event)">
-            &#10095;
-        </button>
+        <p class="sequence-description">
+            Description of this sequence goes here. Explain the scene,
+            project, or context briefly.
+        </p>
 
     </div>
 
 
-    <!-- LIGHTBOX JAVASCRIPT -->
+    <!-- ANIMATIC -->
 
-    <script>
+    <div class="sequence-animatic">
 
-        let currentStoryboardImages = [];
-        let currentStoryboardIndex = 0;
+        <h4 class="animatic-title">
+            Animatic
+        </h4>
 
+        <div class="video-block">
 
-        function openStoryboardLightbox(button) {
+            <video
+                controls
+                preload="metadata"
+                src="assets/storyboards/sequence-01/animatic.mp4">
+            </video>
 
-            const sequence =
-                button.closest(".storyboard-sequence");
+        </div>
 
-            currentStoryboardImages =
-                Array.from(
-                    sequence.querySelectorAll(".panel-image-button")
-                );
-
-            currentStoryboardIndex =
-                currentStoryboardImages.indexOf(button);
-
-            updateStoryboardLightbox();
-
-            document
-                .getElementById("storyboardLightbox")
-                .classList.add("active");
-
-            document.body.style.overflow = "hidden";
-        }
+    </div>
 
 
-        function updateStoryboardLightbox() {
+    <!-- STORYBOARD PANELS -->
 
-            const button =
-                currentStoryboardImages[currentStoryboardIndex];
-
-            if (!button) {
-                return;
-            }
-
-            const image =
-                document.getElementById("lightboxImage");
-
-            image.src = button.dataset.image;
-
-            image.alt =
-                button.querySelector("img").alt;
-        }
+    <div class="storyboard-strip">
 
 
-        function closeStoryboardLightbox() {
+        <!-- BOARD 01 -->
 
-            document
-                .getElementById("storyboardLightbox")
-                .classList.remove("active");
+        <div class="storyboard-panel">
 
-            document.body.style.overflow = "";
-        }
+            <div class="panel-number">
+                01
+            </div>
 
+            <button
+                class="panel-image-button"
+                type="button"
+                onclick="openStoryboardLightbox(this)"
+                data-image="assets/storyboards/sequence-01/board-01.jpg">
 
-        function previousStoryboard(event) {
+                <img
+                    class="storyboard-image"
+                    src="assets/storyboards/sequence-01/board-01.jpg"
+                    alt="Sequence 01 storyboard panel 01">
 
-            if (event) {
-                event.stopPropagation();
-            }
+            </button>
 
-            if (currentStoryboardImages.length === 0) {
-                return;
-            }
+            <p class="panel-description">
+                Dialogue or action description.
+            </p>
 
-            currentStoryboardIndex--;
-
-            if (currentStoryboardIndex < 0) {
-                currentStoryboardIndex =
-                    currentStoryboardImages.length - 1;
-            }
-
-            updateStoryboardLightbox();
-        }
+        </div>
 
 
-        function nextStoryboard(event) {
+        <!-- BOARD 02 -->
 
-            if (event) {
-                event.stopPropagation();
-            }
+        <div class="storyboard-panel">
 
-            if (currentStoryboardImages.length === 0) {
-                return;
-            }
+            <div class="panel-number">
+                02
+            </div>
 
-            currentStoryboardIndex++;
+            <button
+                class="panel-image-button"
+                type="button"
+                onclick="openStoryboardLightbox(this)"
+                data-image="assets/storyboards/sequence-01/board-02.jpg">
 
-            if (
-                currentStoryboardIndex >=
-                currentStoryboardImages.length
-            ) {
-                currentStoryboardIndex = 0;
-            }
+                <img
+                    class="storyboard-image"
+                    src="assets/storyboards/sequence-01/board-02.jpg"
+                    alt="Sequence 01 storyboard panel 02">
 
-            updateStoryboardLightbox();
-        }
+            </button>
+
+            <p class="panel-description">
+                Dialogue or action description.
+            </p>
+
+        </div>
 
 
-        document.addEventListener("keydown", function(event) {
+        <!-- BOARD 03 -->
 
-            const lightbox =
-                document.getElementById("storyboardLightbox");
+        <div class="storyboard-panel">
 
-            if (!lightbox.classList.contains("active")) {
-                return;
-            }
+            <div class="panel-number">
+                03
+            </div>
 
-            if (event.key === "Escape") {
-                closeStoryboardLightbox();
-            }
+            <button
+                class="panel-image-button"
+                type="button"
+                onclick="openStoryboardLightbox(this)"
+                data-image="assets/storyboards/sequence-01/board-03.jpg">
 
-            if (event.key === "ArrowLeft") {
-                previousStoryboard();
-            }
+                <img
+                    class="storyboard-image"
+                    src="assets/storyboards/sequence-01/board-03.jpg"
+                    alt="Sequence 01 storyboard panel 03">
 
-            if (event.key === "ArrowRight") {
-                nextStoryboard();
-            }
+            </button>
 
-        });
+            <p class="panel-description">
+                Dialogue or action description.
+            </p>
 
-    </script>
+        </div>
+
+
+        <!-- BOARD 04 -->
+
+        <div class="storyboard-panel">
+
+            <div class="panel-number">
+                04
+            </div>
+
+            <button
+                class="panel-image-button"
+                type="button"
+                onclick="openStoryboardLightbox(this)"
+                data-image="assets/storyboards/sequence-01/board-04.jpg">
+
+                <img
+                    class="storyboard-image"
+                    src="assets/storyboards/sequence-01/board-04.jpg"
+                    alt="Sequence 01 storyboard panel 04">
+
+            </button>
+
+            <p class="panel-description">
+                Dialogue or action description.
+            </p>
+
+        </div>
+
+
+        <!-- BOARD 05 -->
+
+        <div class="storyboard-panel">
+
+            <div class="panel-number">
+                05
+            </div>
+
+            <button
+                class="panel-image-button"
+                type="button"
+                onclick="openStoryboardLightbox(this)"
+                data-image="assets/storyboards/sequence-01/board-05.jpg">
+
+                <img
+                    class="storyboard-image"
+                    src="assets/storyboards/sequence-01/board-05.jpg"
+                    alt="Sequence 01 storyboard panel 05">
+
+            </button>
+
+            <p class="panel-description">
+                Dialogue or action description.
+            </p>
+
+        </div>
+
+
+        <!-- BOARD 06 -->
+
+        <div class="storyboard-panel">
+
+            <div class="panel-number">
+                06
+            </div>
+
+            <button
+                class="panel-image-button"
+                type="button"
+                onclick="openStoryboardLightbox(this)"
+                data-image="assets/storyboards/sequence-01/board-06.jpg">
+
+                <img
+                    class="storyboard-image"
+                    src="assets/storyboards/sequence-01/board-06.jpg"
+                    alt="Sequence 01 storyboard panel 06">
+
+            </button>
+
+            <p class="panel-description">
+                Dialogue or action description.
+            </p>
+
+        </div>
+
+
+        <!-- BOARD 07 -->
+
+        <div class="storyboard-panel">
+
+            <div class="panel-number">
+                07
+            </div>
+
+            <button
+                class="panel-image-button"
+                type="button"
+                onclick="openStoryboardLightbox(this)"
+                data-image="assets/storyboards/sequence-01/board-07.jpg">
+
+                <img
+                    class="storyboard-image"
+                    src="assets/storyboards/sequence-01/board-07.jpg"
+                    alt="Sequence 01 storyboard panel 07">
+
+            </button>
+
+            <p class="panel-description">
+                Dialogue or action description.
+            </p>
+
+        </div>
+
+
+        <!-- BOARD 08 -->
+
+        <div class="storyboard-panel">
+
+            <div class="panel-number">
+                08
+            </div>
+
+            <button
+                class="panel-image-button"
+                type="button"
+                onclick="openStoryboardLightbox(this)"
+                data-image="assets/storyboards/sequence-01/board-08.jpg">
+
+                <img
+                    class="storyboard-image"
+                    src="assets/storyboards/sequence-01/board-08.jpg"
+                    alt="Sequence 01 storyboard panel 08">
+
+            </button>
+
+            <p class="panel-description">
+                Dialogue or action description.
+            </p>
+
+        </div>
+
+
+        <!-- BOARD 09 -->
+
+        <div class="storyboard-panel">
+
+            <div class="panel-number">
+                09
+            </div>
+
+            <button
+                class="panel-image-button"
+                type="button"
+                onclick="openStoryboardLightbox(this)"
+                data-image="assets/storyboards/sequence-01/board-09.jpg">
+
+                <img
+                    class="storyboard-image"
+                    src="assets/storyboards/sequence-01/board-09.jpg"
+                    alt="Sequence 01 storyboard panel 09">
+
+            </button>
+
+            <p class="panel-description">
+                Dialogue or action description.
+            </p>
+
+        </div>
+
+
+        <!-- BOARD 10 -->
+
+        <div class="storyboard-panel">
+
+            <div class="panel-number">
+                10
+            </div>
+
+            <button
+                class="panel-image-button"
+                type="button"
+                onclick="openStoryboardLightbox(this)"
+                data-image="assets/storyboards/sequence-01/board-10.jpg">
+
+                <img
+                    class="storyboard-image"
+                    src="assets/storyboards/sequence-01/board-10.jpg"
+                    alt="Sequence 01 storyboard panel 10">
+
+            </button>
+
+            <p class="panel-description">
+                Dialogue or action description.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     SEQUENCE 02
+     ========================================================= -->
+
+<div class="storyboard-sequence">
+
+    <div class="sequence-header">
+
+        <h3 class="sequence-title">
+            Sequence 02
+        </h3>
+
+        <p class="sequence-description">
+            Description of this sequence goes here.
+        </p>
+
+    </div>
+
+
+    <!-- ANIMATIC -->
+
+    <div class="sequence-animatic">
+
+        <h4 class="animatic-title">
+            Animatic
+        </h4>
+
+        <div class="video-block">
+
+            <video
+                controls
+                preload="metadata"
+                src="assets/storyboards/sequence-02/animatic.mp4">
+            </video>
+
+        </div>
+
+    </div>
+
+
+    <!-- STORYBOARD PANELS -->
+
+    <div class="storyboard-strip">
+
+
+        <!-- BOARD 01 -->
+
+        <div class="storyboard-panel">
+
+            <div class="panel-number">
+                01
+            </div>
+
+            <button
+                class="panel-image-button"
+                type="button"
+                onclick="openStoryboardLightbox(this)"
+                data-image="assets/storyboards/sequence-02/board-01.jpg">
+
+                <img
+                    class="storyboard-image"
+                    src="assets/storyboards/sequence-02/board-01.jpg"
+                    alt="Sequence 02 storyboard panel 01">
+
+            </button>
+
+            <p class="panel-description">
+                Dialogue or action description.
+            </p>
+
+        </div>
+
+
+        <!-- BOARD 02 -->
+
+        <div class="storyboard-panel">
+
+            <div class="panel-number">
+                02
+            </div>
+
+            <button
+                class="panel-image-button"
+                type="button"
+                onclick="openStoryboardLightbox(this)"
+                data-image="assets/storyboards/sequence-02/board-02.jpg">
+
+                <img
+                    class="storyboard-image"
+                    src="assets/storyboards/sequence-02/board-02.jpg"
+                    alt="Sequence 02 storyboard panel 02">
+
+            </button>
+
+            <p class="panel-description">
+                Dialogue or action description.
+            </p>
+
+        </div>
+
+
+        <!-- BOARD 03 -->
+
+        <div class="storyboard-panel">
+
+            <div class="panel-number">
+                03
+            </div>
+
+            <button
+                class="panel-image-button"
+                type="button"
+                onclick="openStoryboardLightbox(this)"
+                data-image="assets/storyboards/sequence-02/board-03.jpg">
+
+                <img
+                    class="storyboard-image"
+                    src="assets/storyboards/sequence-02/board-03.jpg"
+                    alt="Sequence 02 storyboard panel 03">
+
+            </button>
+
+            <p class="panel-description">
+                Dialogue or action description.
+            </p>
+
+        </div>
+
+
+        <!-- BOARD 04 -->
+
+        <div class="storyboard-panel">
+
+            <div class="panel-number">
+                04
+            </div>
+
+            <button
+                class="panel-image-button"
+                type="button"
+                onclick="openStoryboardLightbox(this)"
+                data-image="assets/storyboards/sequence-02/board-04.jpg">
+
+                <img
+                    class="storyboard-image"
+                    src="assets/storyboards/sequence-02/board-04.jpg"
+                    alt="Sequence 02 storyboard panel 04">
+
+            </button>
+
+            <p class="panel-description">
+                Dialogue or action description.
+            </p>
+
+        </div>
+
+
+        <!-- BOARD 05 -->
+
+        <div class="storyboard-panel">
+
+            <div class="panel-number">
+                05
+            </div>
+
+            <button
+                class="panel-image-button"
+                type="button"
+                onclick="openStoryboardLightbox(this)"
+                data-image="assets/storyboards/sequence-02/board-05.jpg">
+
+                <img
+                    class="storyboard-image"
+                    src="assets/storyboards/sequence-02/board-05.jpg"
+                    alt="Sequence 02 storyboard panel 05">
+
+            </button>
+
+            <p class="panel-description">
+                Dialogue or action description.
+            </p>
+
+        </div>
+
+
+        <!-- BOARD 06 -->
+
+        <div class="storyboard-panel">
+
+            <div class="panel-number">
+                06
+            </div>
+
+            <button
+                class="panel-image-button"
+                type="button"
+                onclick="openStoryboardLightbox(this)"
+                data-image="assets/storyboards/sequence-02/board-06.jpg">
+
+                <img
+                    class="storyboard-image"
+                    src="assets/storyboards/sequence-02/board-06.jpg"
+                    alt="Sequence 02 storyboard panel 06">
+
+            </button>
+
+            <p class="panel-description">
+                Dialogue or action description.
+            </p>
+
+        </div>
+
+
+        <!-- BOARD 07 -->
+
+        <div class="storyboard-panel">
+
+            <div class="panel-number">
+                07
+            </div>
+
+            <button
+                class="panel-image-button"
+                type="button"
+                onclick="openStoryboardLightbox(this)"
+                data-image="assets/storyboards/sequence-02/board-07.jpg">
+
+                <img
+                    class="storyboard-image"
+                    src="assets/storyboards/sequence-02/board-07.jpg"
+                    alt="Sequence 02 storyboard panel 07">
+
+            </button>
+
+            <p class="panel-description">
+                Dialogue or action description.
+            </p>
+
+        </div>
+
+
+        <!-- BOARD 08 -->
+
+        <div class="storyboard-panel">
+
+            <div class="panel-number">
+                08
+            </div>
+
+            <button
+                class="panel-image-button"
+                type="button"
+                onclick="openStoryboardLightbox(this)"
+                data-image="assets/storyboards/sequence-02/board-08.jpg">
+
+                <img
+                    class="storyboard-image"
+                    src="assets/storyboards/sequence-02/board-08.jpg"
+                    alt="Sequence 02 storyboard panel 08">
+
+            </button>
+
+            <p class="panel-description">
+                Dialogue or action description.
+            </p>
+
+        </div>
+
+
+        <!-- BOARD 09 -->
+
+        <div class="storyboard-panel">
+
+            <div class="panel-number">
+                09
+            </div>
+
+            <button
+                class="panel-image-button"
+                type="button"
+                onclick="openStoryboardLightbox(this)"
+                data-image="assets/storyboards/sequence-02/board-09.jpg">
+
+                <img
+                    class="storyboard-image"
+                    src="assets/storyboards/sequence-02/board-09.jpg"
+                    alt="Sequence 02 storyboard panel 09">
+
+            </button>
+
+            <p class="panel-description">
+                Dialogue or action description.
+            </p>
+
+        </div>
+
+
+        <!-- BOARD 10 -->
+
+        <div class="storyboard-panel">
+
+            <div class="panel-number">
+                10
+            </div>
+
+            <button
+                class="panel-image-button"
+                type="button"
+                onclick="openStoryboardLightbox(this)"
+                data-image="assets/storyboards/sequence-02/board-10.jpg">
+
+                <img
+                    class="storyboard-image"
+                    src="assets/storyboards/sequence-02/board-10.jpg"
+                    alt="Sequence 02 storyboard panel 10">
+
+            </button>
+
+            <p class="panel-description">
+                Dialogue or action description.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<div class="video-overlay"></div>
+
+</div>
+</main>
+
+
+<footer class="footer fade-in">
+© 2026 Kazuya Boehringer
+</footer>
+
+
+<!-- =========================================================
+     STORYBOARD LIGHTBOX
+     ========================================================= -->
+
+<div
+    class="storyboard-lightbox"
+    id="storyboardLightbox">
+
+    <button
+        class="lightbox-close"
+        type="button"
+        onclick="closeStoryboardLightbox()">
+        &times;
+    </button>
+
+    <button
+        class="lightbox-prev"
+        type="button"
+        onclick="previousStoryboard(event)">
+        &#10094;
+    </button>
+
+    <img
+        id="lightboxImage"
+        src=""
+        alt="Expanded storyboard panel">
+
+    <button
+        class="lightbox-next"
+        type="button"
+        onclick="nextStoryboard(event)">
+        &#10095;
+    </button>
+
+</div>
+
+
+<script>
+
+let currentStoryboardImages = [];
+let currentStoryboardIndex = 0;
+
+
+function openStoryboardLightbox(button) {
+
+    const sequence =
+        button.closest(".storyboard-sequence");
+
+    currentStoryboardImages =
+        Array.from(
+            sequence.querySelectorAll(".panel-image-button")
+        );
+
+    currentStoryboardIndex =
+        currentStoryboardImages.indexOf(button);
+
+    updateStoryboardLightbox();
+
+    document
+        .getElementById("storyboardLightbox")
+        .classList.add("active");
+
+    document.body.style.overflow = "hidden";
+}
+
+
+function updateStoryboardLightbox() {
+
+    const button =
+        currentStoryboardImages[currentStoryboardIndex];
+
+    if (!button) return;
+
+    const image =
+        document.getElementById("lightboxImage");
+
+    image.src = button.dataset.image;
+
+    image.alt =
+        button.querySelector("img").alt;
+}
+
+
+function closeStoryboardLightbox() {
+
+    document
+        .getElementById("storyboardLightbox")
+        .classList.remove("active");
+
+    document.body.style.overflow = "";
+}
+
+
+function previousStoryboard(event) {
+
+    if (event) {
+        event.stopPropagation();
+    }
+
+    if (currentStoryboardImages.length === 0) {
+        return;
+    }
+
+    currentStoryboardIndex--;
+
+    if (currentStoryboardIndex < 0) {
+        currentStoryboardIndex =
+            currentStoryboardImages.length - 1;
+    }
+
+    updateStoryboardLightbox();
+}
+
+
+function nextStoryboard(event) {
+
+    if (event) {
+        event.stopPropagation();
+    }
+
+    if (currentStoryboardImages.length === 0) {
+        return;
+    }
+
+    currentStoryboardIndex++;
+
+    if (
+        currentStoryboardIndex >=
+        currentStoryboardImages.length
+    ) {
+        currentStoryboardIndex = 0;
+    }
+
+    updateStoryboardLightbox();
+}
+
+
+document.addEventListener("keydown", function(event) {
+
+    const lightbox =
+        document.getElementById("storyboardLightbox");
+
+    if (!lightbox.classList.contains("active")) {
+        return;
+    }
+
+    if (event.key === "Escape") {
+        closeStoryboardLightbox();
+    }
+
+    if (event.key === "ArrowLeft") {
+        previousStoryboard();
+    }
+
+    if (event.key === "ArrowRight") {
+        nextStoryboard();
+    }
+
+});
+
+</script>
+
 
 </body>
-
 </html>
