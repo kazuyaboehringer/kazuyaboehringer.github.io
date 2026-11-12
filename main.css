@@ -789,12 +789,11 @@ body {
 }
 
 .lightbox-description {
-    margin: 18px 0 0;
-    max-width: 900px;
-    color: #ffffff;
-    font-size: 1rem;
+    color: #ffffff !important;
+    font-size: 16px;
     line-height: 1.5;
     text-align: center;
+    margin: 15px 0 0;
 }
 
 /* =========================
