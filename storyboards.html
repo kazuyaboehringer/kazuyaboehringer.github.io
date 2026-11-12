@@ -1676,11 +1676,16 @@
         &#10094;
     </button>
 
-    <img
-        id="lightboxImage"
-        src=""
-        alt="Expanded storyboard panel">
+    <div class="lightbox-content">
+        <img class="lightbox-image" src="" alt="">
 
+        <p 
+            class="lightbox-description"
+            id="lightboxDescription">
+            
+        </p>
+    </div>
+    
     <button
         class="lightbox-next"
         type="button"
@@ -1695,7 +1700,6 @@
 
 let currentStoryboardImages = [];
 let currentStoryboardIndex = 0;
-
 
 function openStoryboardLightbox(button) {
 
@@ -1730,10 +1734,26 @@ function updateStoryboardLightbox() {
     const image =
         document.getElementById("lightboxImage");
 
+    const description =
+        document.getElementById("lightboxDescription");
+
     image.src = button.dataset.image;
 
     image.alt =
         button.querySelector("img").alt;
+
+    const panel =
+        button.closest(".storyboard-panel");
+
+    const panelDescription =
+        panel.querySelector(".panel-description");
+
+    if (panelDescription) {
+        description.textContent =
+            panelDescription.textContent;
+    } else {
+        description.textContent = "";
+    }
 }
 
 
@@ -1813,8 +1833,6 @@ document.addEventListener("keydown", function(event) {
     }
 
 });
-
-</script>
 
 
 </body>
