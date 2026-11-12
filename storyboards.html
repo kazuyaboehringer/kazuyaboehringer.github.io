@@ -1706,6 +1706,7 @@
 let currentStoryboardImages = [];
 let currentStoryboardIndex = 0;
 
+
 function openStoryboardLightbox(button) {
 
     const sequence =
@@ -1754,10 +1755,14 @@ function updateStoryboardLightbox() {
         panel.querySelector(".panel-description");
 
     if (panelDescription) {
+
         description.textContent =
-            panelDescription.textContent;
+            panelDescription.textContent.trim();
+
     } else {
+
         description.textContent = "";
+
     }
 }
 
@@ -1785,8 +1790,10 @@ function previousStoryboard(event) {
     currentStoryboardIndex--;
 
     if (currentStoryboardIndex < 0) {
+
         currentStoryboardIndex =
             currentStoryboardImages.length - 1;
+
     }
 
     updateStoryboardLightbox();
@@ -1809,7 +1816,9 @@ function nextStoryboard(event) {
         currentStoryboardIndex >=
         currentStoryboardImages.length
     ) {
+
         currentStoryboardIndex = 0;
+
     }
 
     updateStoryboardLightbox();
@@ -1838,6 +1847,8 @@ document.addEventListener("keydown", function(event) {
     }
 
 });
+
+</script>
 
 
 </body>
